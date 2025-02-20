@@ -5,13 +5,14 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(20,20,20);
-    /* background-color: transparent; */
+
+
     height: 10vh;
     color: white;
     transition: all 0.5s;
     transition-timing-function: ease-in;
-    z-index: 1;
-    /* background-color: red; */
+    z-index: 10;
+
 
 }
 .nav__black{
@@ -28,12 +29,17 @@
 .header_left ul{
     width: 140%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
      align-items: center;
     list-style: none;
     cursor: pointer;
+    overflow-x: auto;
     /* background-color: lightgreen; */
 
+}
+.header_left li {
+    margin: 0 15px; /* Space between items */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 .header_right ul{
     width: 150%;
@@ -44,4 +50,39 @@
     /* background-color: lightgreen; */
 
 }
+.header_left ul {
+    flex: 1; /* Allow the list to grow and shrink */
+}
 
+.header_right ul {
+    flex: 1; /* Allow the list to grow and shrink */
+    justify-content: space-around; /* Space items evenly */
+}
+
+@media (max-width: 768px) {
+    .header_outer_container {
+        height: auto; /* Allow height to adjust on small screens */
+        padding: 1rem; /* Add padding */
+    }
+
+    .header_container {
+        flex-direction: column; /* Stack header elements */
+        align-items: flex-start; /* Align items to the start */
+        width: 100%; /* Full width */
+    }
+
+    .header_left ul {
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%; /* Full width for lists */
+        justify-content: flex-start; /* Align items to the start */
+    }
+
+    .header_left li {
+        margin: 10px 0; /* Space between stacked items */
+    }
+
+    .header img {
+        height: 40px; /* Smaller logo */
+        margin-bottom: 10px; /* Space below logo */
+    }
+}

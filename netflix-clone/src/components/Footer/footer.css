@@ -52,3 +52,27 @@
     font-size: 12px;
     margin-bottom: 10px;
 }
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .footer_inner_container {
+        width: 90%; /* Make it wider on smaller screens */
+    }
+
+    .footer_data {
+        display: block; /* Change to block layout on smaller screens */
+        margin: 0; /* Remove margin for block layout */
+    }
+
+    .footer_data ul {
+        margin: 10px 0; /* Add margin for spacing between lists */
+    }
+
+    .footer_icons {
+        font-size: 24px; /* Smaller icons on mobile */
+    }
+
+    .copy-write {
+        font-size: 10px; /* Smaller text on mobile */
+    }
+}
